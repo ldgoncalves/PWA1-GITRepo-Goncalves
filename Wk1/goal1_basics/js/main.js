@@ -446,7 +446,7 @@ console.log("If-Else weather: ", bobsMood);
     3.  console.log the results after each conditional
  ********************************************/
 
-var weather = 'Cloudy';
+/*var weather = 'Cloudy';
 var waves = 10;
 
 if (weather === 'Sunny') {
@@ -471,7 +471,7 @@ if (weather === 'Sunny') {
 
 console.log("Bob's Mood : ", bobsMood);
 
-
+*/
 
 /*
     BREAKING A TERNARY CONDITIONAL DOWN TO INDIVIDUAL PIECES
@@ -541,6 +541,7 @@ console.log('------Functions ----------');
         functionName();
 
  *****************************
+
     ANONYMOUS FUNCTION
 
     - as an example:
@@ -559,7 +560,17 @@ console.log('------Functions ----------');
      - type the below as an example
         functionName();
  *****************************
+*/
+var myctr = 1;
 
+var myCounter = function(){
+    var testVar = 0;
+    myctr++;
+    console.log('counter = ', myctr);
+};
+
+myCounter();
+myCounter();
 
 
 
@@ -598,8 +609,15 @@ console.log('------Functions ----------');
     - items inside our function we call on these variables.. such as:
  */
 
+var value1 = 1;
+var value2 = 2;
 
+var myFn = function(var1, var2){
 
+    console.log('function number ', var1 + var2);
+};
+
+myFn(value1, value2);
 
 /*******************************************
  STUDENT ACTIVITY 6:
@@ -613,7 +631,16 @@ console.log('------Functions ----------');
      6.  console.log the results
  ********************************************/
 
+var myctr = 1;
 
+var myCounter = function(newct){
+    //var myctr = 50; local variable
+    myctr += newct;
+    console.log('counter = ', myctr);
+};
+
+myCounter(5);
+myCounter(2);
 
 
 /*******************************************
@@ -626,6 +653,12 @@ console.log('------Functions ----------');
     - the called function should be assigned to a variable (i.e name - see below)
  ********************************************/
 
+var myFn = function(){
+    return 'jamesBond';
+};
+
+var name = myFn();
+console.log('name: ', name);
 
 
     // if a return gives back no value, it instead returns “undefined”
@@ -644,6 +677,19 @@ console.log('------Functions ----------');
     4.  console.log the results
  ********************************************/
 
+var myctr = 1;
+
+var myCounter = function(newct){
+    var myctr = 50;
+    myctr += newct;
+    return myctr;
+};
+
+var cnt = myCounter(5);
+console.log('counter = ', cnt);
+
+var cnt = myCounter(2);
+console.log('counter = ', cnt);
 
 
 
@@ -657,3 +703,32 @@ console.log('------Functions ----------');
  5. console.log the Results
  ********************************************/
 
+var value1 = 'Overcast';
+var value2 = 5;
+
+var moodFn = function(weather, waves) {
+    if (weather === 'Sunny') {
+        if (waves === 10) {
+            bobsMood = 'Pumped';
+        } else if ((waves <= 9) && (waves >= 5)) {
+            bobsMood = 'Mellow';
+        } else {
+            bobsMood = 'Bummed';
+        }
+    } else if (weather === 'Overcast') {
+        if ((waves < 10) && (waves >= 7 )) {
+            bobsMood = 'Jacked Up';
+        } else if ((waves <= 6) && (waves >= 3 )) {
+            bobsMood = 'Totally Bummed';
+        } else {
+            bobsMood = 'Not Happy';
+        }
+    } else {
+        bobsMood = 'Sad';
+    };
+
+    return bobsMood;
+};
+
+    var moodType = moodFn(value1, value2);
+    console.log("Bob's Mood : ", moodType);
