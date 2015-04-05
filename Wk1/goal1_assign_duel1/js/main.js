@@ -4,26 +4,40 @@ Date: 4/04/2015
 Assignment: Goal1: Assignment: Duel1
  */
 /******************************
+ Create a fighting game that deducts the health of each player at random, looping 10 times, and at the end of loop, either one of the players will win or both lose. Syntax for loop: (var i = 0; i < 10; i++){ }
+
  Start
- Declarations
- playerOne = Spiderman
- playerTwo = Batman
- player1Damage = 20 maximum damage
- player2Damage = 20 maximum damage
- player1Health = 100 hit points
- player2Health = 100 hit points
- rounds = 0
- Begin fight function and within braces, create an alert for user to start Spiderman vs. Batman fight.
- Insert FOR LOOP in fight function. If i is less than 10 (the 10 rounds) then execute code every time it loops around the i increment adds one to i.
- Within FOR LOOP braces, declare:
- minDamage for player1 to be player1Damage times .50. Same declaration with player2.
- To do this at random, declare this formula for both players:
- Math.floor(Math.random() * (max - min) + min);
- From the results of the formula, minus the health of both players as so: playerOneHealth 	= playerOneHealth - f1
- Declare results  through winnerCheck function.
- While the function is still looping, outcome will only determine winner or loser at end.
- IF results are strictly equal to “no winner”, advance to next round and alert the end of round and health of both player. ELSE alert the results.
- Implement the break command.
+    Create function with no parameters and include in braces:
+        Declarations
+        playerOne = Spiderman
+        playerTwo = Batman
+        player1Damage = 20 maximum damage
+        player2Damage = 20 maximum damage
+        player1Health = 100 hit points
+        player2Health = 100 hit points
+        rounds = 0
+    Begin fight function and within braces, create an alert for user to start      Spiderman vs. Batman fight.
+    Insert FOR LOOP in fight function. If i is less than 10 (the 10 rounds)        then execute code every time it loops around the i increment adds one to i.
+    Within FOR LOOP braces, declare:
+         minDamage for player1 to be player1Damage times .50. Same declaration          with player2.
+         To do this at random, declare this formula for both players:
+         Math.floor(Math.random() * (max - min) + min);
+    From the results of the formula, minus the health of both players as so:       playerOneHealth = playerOneHealth - f1
+    Declare results through winnerCheck function.
+    While the function is still looping, outcome will only determine winner or     loser at end.
+    IF results are strictly equal to “no winner”, advance to next round and        alert the end of round and health of both player. ELSE alert the results.
+    Implement the break command.
+    After fight function, create the winnerCheck function.
+    Declare result = no winner
+    IF both playerOne and playerTwo health is less than 1, result = You Both
+    Die.
+    ELSE IF only playerOne health is less than 1, result = playerTwo               WINS!!!.
+    ELSE IF only playerTwo health is less than 1, result = playerOne      WINS!!!
+    Return the result.
+
+    After the winnerCheck function, write fight(); to invoke the fight function.
+ End
+
  *******************************/
 // self-executing function
 (function(){
