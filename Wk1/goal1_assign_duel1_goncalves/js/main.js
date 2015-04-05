@@ -42,7 +42,7 @@ Assignment: Goal1: Assignment: Duel1
 // self-executing function
 (function(){
     console.log("FIGHT!!!");
-    //Declarations
+
     //player name
     var playerOneName = "Spiderman";
     var playerTwoName = "Batman";
@@ -54,22 +54,21 @@ Assignment: Goal1: Assignment: Duel1
     //player health
     var playerOneHealth = 100;
     var playerTwoHealth = 100;
-    //rounds starts at 0 for loop increment.
+
     var round = 0;
-    //function gets invoked
+
     function fight(){
         //code will go here
         console.log('in the fight function');
 
         alert(playerOneName + ":" + playerOneHealth + ":" + " *START* " + playerTwoName + ":" + playerTwoHealth);
-        //loop for rounds begin
+
         for (var i=0; i<10; i++){
             //console.log(i);
+            //random formula is - Math.floor(Math.random() *(max-min) +min);
 
-            //Damage occurs to both players at a random amount between half                 damage and maximum damage.
             var minDamage1 = player1Damage * .5;
             var minDamage2 = player2Damage * .5;
-            //random formula is - Math.floor(Math.random() *(max-min) +min);
             var f1 = Math.floor(Math.random()* (player1Damage-minDamage1) + minDamage1);
             var f2 = Math.floor(Math.random()* (player2Damage-minDamage2) + minDamage2);
             //console.log(f1);
@@ -83,26 +82,26 @@ Assignment: Goal1: Assignment: Duel1
             //console.log(playerTwoHealth);
 
             console.log(playerOneName + ":" + playerOneHealth + " " + playerTwoName + ":" + playerTwoHealth);
-            //this is from the function to determine either to advance to next round or announce winner
+
             var results = winnerCheck();
             console.log(results);
+
             if(results === "no winner"){
               round++;
                 alert(playerOneName + ":" + playerOneHealth + ":" + " *ROUND "+round+" OVER* " + playerTwoName + ":" + playerTwoHealth);
             }else{
                 alert(results);
-                break; //need in order to restart alert and allow user to continue to interact
+                break;
             }
         };
 
     };
-    //begin winnerCheck function
+
     function winnerCheck(){
         console.log("in winnerCheck FN");
         //code will go here
         var result="no winner";
-        //if there is no winner, round advance until it reaches 10
-        //the results once round 10 is reached
+
         if(playerOneHealth<1 && playerTwoHealth<1){
             result = "You Both Die";
         }else if(playerOneHealth<1){
@@ -117,7 +116,7 @@ Assignment: Goal1: Assignment: Duel1
 
     /******* The program gets started below *******/
     console.log('program starts');
-    fight(); //to invoke fight function
+    fight();
 
 })();
 
