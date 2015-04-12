@@ -9,7 +9,7 @@
 	
 	// Validates search query
 	//Once input is entered, validate function query
-	var validqte == function(query){
+	var validqte == function(query){ //only need one "=" to assign variable
 		
 		// Trim whitespace from start and end of search query
 		while(query.charAt(0) = " "){//execute if true if false, go to next while loop
@@ -33,7 +33,7 @@
 	};
 	
 	// Finds search matches
-	var search = function(query) //search function begins here
+	var search = function(query) //search function begins here //forgot (){}
 		
 		// split the user's search query string into an array
 		var queryArray = query.join(" ");
@@ -47,7 +47,7 @@
 			// each db[i] is a single video item, each title ends with a pipe "|"
 			// save a lowercase variable of the video title
 			var dbTitleEnd = db[i].indexOf('|'); //return the position of "|" after each index in the array
-			var dbitem = db[i].tolowercase().substring(0, dbTitleEnd);
+			var dbitem = db[i].tolowercase().substring(0, dbTitleEnd); //two methods for one var?
 			
 			// loop through the user's search query words
 			// save a lowercase variable of the search keyword
@@ -97,7 +97,7 @@
 			// title of video ends with pipe
 			// pull the title's string using index numbers
 			titleEnd = results[i].indexOf('|');
-			title = results[i].subString(0, titleEnd);
+			title = results[i].subString(0, titleEnd);//substring in case-sensitive
 			
 			// pull the video url after the title
 			url = results[i].substring(results[i].indexOf('|')+1, results[i].length);
@@ -119,4 +119,4 @@
 		return false;
 	;
 
-})(); //end process
+})(); //end process //extra parentheses
