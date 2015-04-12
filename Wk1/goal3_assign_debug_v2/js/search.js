@@ -2,36 +2,38 @@
 (function(){
 	
 	// Variable initialization (DO NOT FIX ANY OF THE BELOW VAR's)
-	var resultsDIV = document.getElementById("results"),
+	var resultsDIV = document.getElementById("results"), //initialize search be for input
 		searchInput = document.forms[0].search,
 		currentSearch = ''
 	;
 	
 	// Validates search query
+	//Once input is entered, validate function query
 	var validqte == function(query){
 		
 		// Trim whitespace from start and end of search query
-		while(query.charAt(0) = " "){
+		while(query.charAt(0) = " "){//execute if true if false, go to next while loop
 			query = query.substring(1, query.length);
 		};
-		while(query.charAt(query.length-1) === ""){
+		while(query.charAt(query.length-1) === ""){//this loop check if there is no whitespace
 			query = query.substring(0, query.length-1);
 		;
 		
 		// Check search length, must have 3 characters
 		if(query.length < 3){
+			//in order to move on, query has to be more than 3
 			alert("Your search query is too small, try again.);
-			
+
 			// (DO NOT FIX THE LINE DIRECTLY BELOW)
-			searchInput.focus();
-			return;
+			searchInput.focus(); //focus on element search.Input
+			return; //return validated query to be entered in the database
 		};
 		
-		search(query);
+		search(query); //call function
 	};
 	
 	// Finds search matches
-	var search = function(query)
+	var search = function(query) //search function begins here
 		
 		// split the user's search query string into an array
 		var queryArray = query.join(" ");
