@@ -46,7 +46,7 @@
 		
 			// each db[i] is a single video item, each title ends with a pipe "|"
 			// save a lowercase variable of the video title
-			var dbTitleEnd = db[i].indexOf('|');
+			var dbTitleEnd = db[i].indexOf('|'); //return the position of "|" after each index in the array
 			var dbitem = db[i].tolowercase().substring(0, dbTitleEnd);
 			
 			// loop through the user's search query words
@@ -63,7 +63,7 @@
 			;
 		;
 		
-		results.sort();
+		results.sort();// sort results in array
 		
 		// Check that matches were found, and run output functions
 		if(results.length = 0){
@@ -74,12 +74,12 @@
 	};
 	
 	// Put "No Results" message into page (DO NOT FIX THE HTML VAR NOR THE innerHTML)
-	var noMatch = function(){
+	var noMatch = function(){ //display suggestion for what to search
 		var html = ''+
 			'<p>No Results found.</p>'+
 			'<p style="font-size:10px;">Try searching for "JavaScript".  Just an idea.</p>'
 		;
-		resultsDIV.innerHTML = html;
+		resultsDIV.innerHTML = html; //this replaces document.write to create a div in a html doc
 	};
 	
 	// Put matches into page as paragraphs with anchors
