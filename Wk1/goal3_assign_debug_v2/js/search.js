@@ -86,7 +86,7 @@
 	var showMatches = function(results){
 		
 		// THE NEXT 4 LINES ARE CORRECT.
-		var html = '<p>Results</p>', 
+		var html = '<p>Results</p>', //display results in html format
 			title, 
 			url
 		;
@@ -105,18 +105,18 @@
 			// make the video link - THE NEXT LINE IS CORRECT.
 			html += '<p><a href=' + url + '>' + title + '</a></p>';
 		};
-		resultsDIV.innerHTML = html; //THIS LINE IS CORRECT.
+		resultsDIV.innerHTML = html; //THIS LINE IS CORRECT. //create a div in the html to display
 	};
 	
 	// The onsubmit event will be reviewed in upcoming Course Material.
 	// THE LINE DIRECTLY BELOW IS CORRECT
-	document.forms[0].onsubmit = function(){
-		var query = searchInput.value;
-		validqte(query);
+	document.forms[0].onsubmit = function(){ //submits form
+		var query = searchInput.value; //assign value property once form is submitted
+		validqte(query); //call function validate query
 
         // return false is needed for most events - this will be reviewed in upcoming course material
         // THE LINE DIRECTLY BELOW IS CORRECT
 		return false;
 	;
 
-})();
+})(); //end process

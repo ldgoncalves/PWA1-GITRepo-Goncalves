@@ -36,10 +36,10 @@
       <file leaf-file-name="search.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Wk1/goal3_assign_debug_v2/js/search.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5006658">
-              <caret line="100" column="12" selection-start-line="100" selection-start-column="12" selection-end-line="100" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.8801598">
+              <caret line="121" column="19" selection-start-line="121" selection-start-column="19" selection-end-line="121" selection-end-column="19" />
               <folding>
-                <marker date="1428863322000" expanded="true" signature="2595:2610" placeholder="..." />
+                <marker date="1428865142000" expanded="true" signature="2595:2610" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -69,7 +69,7 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="650" />
+    <option name="x" value="542" />
     <option name="y" value="23" />
     <option name="width" value="1006" />
     <option name="height" value="873" />
@@ -275,7 +275,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="650" y="23" width="1006" height="873" extended-state="0" />
+    <frame x="542" y="23" width="1006" height="873" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -326,7 +326,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1428863322000" expanded="true" signature="2595:2610" placeholder="..." />
+            <marker date="1428865142000" expanded="true" signature="2595:2610" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -461,10 +461,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Wk1/goal3_assign_debug_v2/js/search.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5006658">
-          <caret line="100" column="12" selection-start-line="100" selection-start-column="12" selection-end-line="100" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.8801598">
+          <caret line="121" column="19" selection-start-line="121" selection-start-column="19" selection-end-line="121" selection-end-column="19" />
           <folding>
-            <marker date="1428863322000" expanded="true" signature="2595:2610" placeholder="..." />
+            <marker date="1428865142000" expanded="true" signature="2595:2610" placeholder="..." />
           </folding>
         </state>
       </provider>
