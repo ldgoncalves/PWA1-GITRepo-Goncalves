@@ -323,6 +323,21 @@ console.log(arr2.indexOf('c'));
     var secondHalfYr = ["Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
     var combined;
 
+	var combined = firstQtr.concat(secondQtr);
+	console.log("Concat 2 arrays: ", combined);
+
+	var combined = firstQtr.concat(secondQtr,secondHalfYr);
+	console.log("Concat 3 arrays: ", combined);
+
+	console.log("Joined arrays: ", combined.join());
+
+	console.log("Took out = ", combined.pop());
+	console.log("Show Array: ", combined);
+
+	var results = secondHalfYr.slice(2,4);
+	console.log("slice: ", results);
+
+
 
 /*
 	===============================================
