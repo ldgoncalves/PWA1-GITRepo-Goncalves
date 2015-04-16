@@ -252,34 +252,54 @@ var arr3 = ['apple', 'orange', 50393, 7.324];
 //Returns the first (least) index of an element within the array equal
 //to the specified value, or -1 if none is found.
 
+console.log(arr2.indexOf('c'));
 
 // join()
 // Joins all elements of an array into a string.
 
+	console.log(arr2.join(','));
 
 // pop()
 // Removes the last element from an array and returns that element
 // shift() removes the first element from an array.
+	var element = arr1.pop();
+	console.log(element);
+	console.log(arr1);
 
+	var element = arr1.shift();
+	console.log(element);
+	console.log(arr1);
 
 // push()
 // Adds one or more elements to the end of an array and returns the new
 //   length of the array
 // unshift() - Adds one or more elements to the front of an array.
+	arr2.push('f');
+	console.log(arr2);
 
+	arr1.unshift('1');
+	console.log(arr1);
 
 // reverse()
 // Reverses the order of the elements of an array
-
+	console.log(arr1.reverse());
 
 // splice()
 // Adds and/or removes elements from an array.
 
+	console.log(arr1);
+	console.log(arr1.splice(4,2)); //NOTE: the array was reversed
+	console.log(arr1);				//The went to index 4 and then removed 2 indexes
 
 // forEach()
 // Calls a function for each element in the array.
 
-
+	console.log(arr1);
+	arr1.forEach(function(element, index, array){
+		console.log('element', element);
+		console.log('index', index);
+		console.log('array', array);
+	});
 
 
 /*******************************************
@@ -421,7 +441,8 @@ var bondsCars = function (){
 	return ['ferrari', 'lambo', 'vwBug'];
 };
 
-	var cars = bondsCars(); //will return the array of values
+	var cars = bondsCars(); //will return the array of values //calls function
+	console.log('James Bond cars', cars);
 
 	/* 
 		Self Executing Functions
@@ -439,6 +460,9 @@ var bondsCars = function (){
 				var fn = (function(){})();	
 	*/	
 
+	(function (){
+		//code goes here
+	})();//this paren calls the function
 
 /*
 	===============================================
