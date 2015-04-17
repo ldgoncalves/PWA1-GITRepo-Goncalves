@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="564ebdd8-dcb1-4749-88e9-f0c8c2215ccd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Wk2/goal2_assign_duel2/images/fight_bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Wk2/goal2_assign_duel2/images/grey_wash_wall.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Wk2/goal2_assign_duel2/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Wk2/goal2_assign_duel2/.idea/goal1_assign_duel1.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Wk2/goal2_assign_duel2/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Wk2/goal2_assign_duel2/js/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Wk2/goal2_assign_duel2/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Wk2/goal2_assign_duel2/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Wk2/goal2_assign_duel2/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Wk2/goal2_assign_duel2/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Wk2/goal2_assign_duel2/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="564ebdd8-dcb1-4749-88e9-f0c8c2215ccd" name="Default" comment="" />
     <ignored path="PWA1-GITRepo-Goncalves.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,8 +24,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Wk2/goal2_assign_duel2/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.0876288">
-              <caret line="22" column="99" selection-start-line="22" selection-start-column="99" selection-end-line="22" selection-end-column="99" />
+            <state vertical-scroll-proportion="0.6765464">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -93,8 +80,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="330" />
-    <option name="y" value="23" />
+    <option name="x" value="449" />
+    <option name="y" value="24" />
     <option name="width" value="1006" />
     <option name="height" value="873" />
   </component>
@@ -319,7 +306,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="330" y="23" width="1006" height="873" extended-state="0" />
+    <frame x="449" y="24" width="1006" height="873" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -602,8 +589,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Wk2/goal2_assign_duel2/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0876288">
-          <caret line="22" column="99" selection-start-line="22" selection-start-column="99" selection-end-line="22" selection-end-column="99" />
+        <state vertical-scroll-proportion="0.6765464">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>
