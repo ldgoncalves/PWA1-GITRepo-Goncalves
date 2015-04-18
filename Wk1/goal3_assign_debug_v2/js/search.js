@@ -9,7 +9,7 @@
 	
 	// Validates search query
 	//Once input is entered, validate function query
-	var validqte == function(query){ //only need one "=" to assign variable
+	var validqte = function(query){ //only need one "=" to assign variable
 		
 		// Trim whitespace from start and end of search query
 		while(query.charAt(0) = " "){//execute if true if false, go to next while loop
@@ -33,7 +33,7 @@
 	};
 	
 	// Finds search matches
-	var search = function(query) //search function begins here //forgot (){}
+	var search = function(query) {//search function begins here //forgot (){}
 		
 		// split the user's search query string into an array
 		var queryArray = query.join(" ");
