@@ -26,7 +26,7 @@
 
 	-similar to making an array, we declare the object’s properties inside the literal, separating by comma...
 */
-//console.log('------Objects ----------');
+console.log('------Objects ----------');
 
 //{KEY : Value} pairings,
 //	person = {'name':'bond', 'age':35, 'secretAgent':true};
