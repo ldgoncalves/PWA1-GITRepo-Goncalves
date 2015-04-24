@@ -4,10 +4,9 @@ Date: 4/04/2015
 Assignment: Goal1: Assignment: Duel1
  */
 /******************************
- Create a fighting game that deducts the health of each player at random, looping 10 times, and at the end of loop, either one of the players will win or both lose. Syntax for loop: (var i = 0; i < 10; i++){ }
 
  Start
-    Create function with no parameters and include in braces:
+    Create a self-executing function and include in braces:
         Create an array with two objects that displays player name, damage and health.
 
  var fighters =  [fighter1 = {name:"Spiderman",damage:20, health:100},
@@ -44,64 +43,70 @@ Assignment: Goal1: Assignment: Duel1
     var fighters =  [fighter1 = {name:"Spiderman",damage:20, health:100},
     fighter2 = {name:"Batman",damage:20,health:100}];
 
-    //rounds starts at 0 for loop increment.
+    //rounds starts at 0 for increment
     var round = 0;
+
+    //text for fight button
+    var roundTxt= document.getElementById('round');
+    roundTxt.innerHTML = 'Click FIGHT BUTTON to Start!';
+
+    //this is where the winner will be displayed
+    var winner = document.getElementById('scores');
+    //CSS style for display
+    winner.style.textAlign = 'center';
+    winner.style.fontFamily = 'arial';
+    winner.style.fontSize = '25px';
+
+    //text for fighter1 scores
+    var score1 = document.getElementById('kabal');
+    console.log(score1);
+    score1.innerHTML ='<p>' + fighters[0].name + ":" + fighters[0].health +'</p>';
+
+    //text for fighter2 scores
+    var score2 = document.getElementById('kratos');
+    console.log(score2);
+    score2.innerHTML ='<p>' + fighters[1].name + ":" + fighters[1].health +'</p>';
+
+    //button trigger
+    var button = document.getElementById("fight_btn").addEventListener("click", fight);
 
     //function gets invoked
     function fight(){
         //code will go here
         console.log('in the fight function');
 
-        var roundTxt= document.getElementById('round');
-        roundTxt.innerHTML = 'Click FIGHT BUTTON to Start!';
-
-        var score1 = document.getElementById('kabal');
-        console.log(score1);
-        score1.innerHTML ='<p>' + fighter1.name + ":" + fighter1.health +'</p>';
-
-        var score2 = document.getElementById('kratos');
-        console.log(score2);
-        score2.innerHTML ='<p>' + fighter2.name + ":" + fighter2.health +'</p>';
-
-
-
-
-
-
-
-        //alert(fighter1.name + ":" + fighter1.health + " *START* " + fighter2.name + ":" + fighter2.health);
-        //loop for rounds begin
-        for (var i=0; i<10; i++){
-            //console.log(i);
 
             //Damage occurs to both players at a random amount between half damage and maximum damage.
-            var minDamage1 = fighter1.damage * .5;
-            var minDamage2 = fighter2.damage * .5;
+            var minDamage1 = fighters[0].damage * .5;
+            var minDamage2 = fighters[1].damage * .5;
             //random formula is - Math.floor(Math.random() *(max-min) +min);
-            var f1 = Math.floor(Math.random()* (fighter1.damage-minDamage1) + minDamage1);
-            var f2 = Math.floor(Math.random()* (fighter2.damage-minDamage2) + minDamage2);
+            var f1 = Math.floor(Math.random()* (fighters[0].damage-minDamage1) + minDamage1);
+            var f2 = Math.floor(Math.random()* (fighters[1].damage-minDamage2) + minDamage2);
             //console.log(f1);
             //console.log(f2);
 
             //inflict damage
-            fighter1.health-=f1;
-            fighter2.health-=f2;
+            fighters[0].health-=f1;
+            fighters[1].health-=f2;
 
-            //console.log(fighter1[2]);
-            //console.log(fighter2[2]);
 
-            console.log(fighter1.name + ":" + fighter1.health + " " + fighter2.name + ":" + fighter2.health);
+            console.log(fighters[0].name + ":" + fighters[0].health + " " + fighters[1].name + ":" + fighters[1].health);
             //this is from the function to determine either to advance to next round or announce winner
             var results = winnerCheck();
             console.log(results);
             if(results === "no winner"){
               round++;
-                alert(fighter1.name + ":" + fighter1.health  + " *ROUND "+round+" OVER* " + fighter2.name + ":" + fighter2.health);
+                //displays fighter1 current health
+                score1.innerHTML ='<p>' + fighters[0].name + ":" + fighters[0].health +'</p>';
+                //displays fighter2 current health
+                score2.innerHTML ='<p>' + fighters[1].name + ":" + fighters[1].health +'</p>';
+                //displays current round
+                roundTxt.innerHTML = " *ROUND " + round + " OVER* ";
             }else{
-                alert(results);
-                break; //need in order to restart alert and allow user to continue to interact
+                //displays winners in middle top of screen
+                winner.innerHTML = '<p>' + results + '</p>';
+                //break; //need in order to restart alert and allow user to continue to interact
             }
-        };
 
     };
     //begin winnerCheck function
@@ -111,12 +116,12 @@ Assignment: Goal1: Assignment: Duel1
         var result="no winner";
         //if there is no winner, round advance until it reaches 10
         //the results once round 10 is reached
-        if(fighter1.health<1 && fighter2.health<1){
+        if(fighters[0].health<1 && fighters[1].health<1){
             result = "You Both Die";
-        }else if(fighter1.health<1){
-             result = fighter2.name+" WINS!!!"
-        }else if(fighter2.health<1){
-            result = fighter1.name+" WINS!!!"
+        }else if(fighters[0].health<1){
+             result = fighters[1].name+" WINS!!!"
+        }else if(fighters[1].health<1){
+            result = fighters[0].name+" WINS!!!"
         };
 
         return result;
