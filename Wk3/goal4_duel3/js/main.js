@@ -66,48 +66,52 @@ Assignment: Goal1: Assignment: Duel1
     var score2 = document.getElementById('kratos');
     console.log(score2);
     score2.innerHTML ='<p>' + fighters[1].name + ":" + fighters[1].health +'</p>';
-
     //button trigger
-    var button = document.getElementById("fight_btn").addEventListener("click", fight);
+    var button = document.getElementById("fight_btn");
 
     //function gets invoked
     function fight(){
         //code will go here
         console.log('in the fight function');
 
+        button.onlick = function (e) {
 
             //Damage occurs to both players at a random amount between half damage and maximum damage.
             var minDamage1 = fighters[0].damage * .5;
             var minDamage2 = fighters[1].damage * .5;
             //random formula is - Math.floor(Math.random() *(max-min) +min);
-            var f1 = Math.floor(Math.random()* (fighters[0].damage-minDamage1) + minDamage1);
-            var f2 = Math.floor(Math.random()* (fighters[1].damage-minDamage2) + minDamage2);
+            var f1 = Math.floor(Math.random() * (fighters[0].damage - minDamage1) + minDamage1);
+            var f2 = Math.floor(Math.random() * (fighters[1].damage - minDamage2) + minDamage2);
             //console.log(f1);
             //console.log(f2);
 
             //inflict damage
-            fighters[0].health-=f1;
-            fighters[1].health-=f2;
+            fighters[0].health -= f1;
+            fighters[1].health -= f2;
 
 
             console.log(fighters[0].name + ":" + fighters[0].health + " " + fighters[1].name + ":" + fighters[1].health);
             //this is from the function to determine either to advance to next round or announce winner
             var results = winnerCheck();
             console.log(results);
-            if(results === "no winner"){
-              round++;
+            if (results === "no winner") {
+                round++;
                 //displays fighter1 current health
-                score1.innerHTML ='<p>' + fighters[0].name + ":" + fighters[0].health +'</p>';
+                score1.innerHTML = '<p>' + fighters[0].name + ":" + fighters[0].health + '</p>';
                 //displays fighter2 current health
-                score2.innerHTML ='<p>' + fighters[1].name + ":" + fighters[1].health +'</p>';
+                score2.innerHTML = '<p>' + fighters[1].name + ":" + fighters[1].health + '</p>';
                 //displays current round
                 roundTxt.innerHTML = " *ROUND " + round + " OVER* ";
-            }else{
+            } else {
                 //displays winners in middle top of screen
                 winner.innerHTML = '<p>' + results + '</p>';
                 //break; //need in order to restart alert and allow user to continue to interact
+
             }
 
+            e.preventDefault();
+            return false;
+        };
     };
     //begin winnerCheck function
     function winnerCheck(){
