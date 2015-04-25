@@ -41,7 +41,6 @@ Assignment: Goal4: Assignment: Duel3
     score2.innerHTML ='<p>' + fighters[1].name + ":" + fighters[1].health +'</p>';
 
     //grab id for fight button
-    var button = document.getElementById("fight_btn");
 
     //function gets invoked
     function fight(){
@@ -49,7 +48,7 @@ Assignment: Goal4: Assignment: Duel3
         console.log('in the fight function');
 
         //this event will only run until user clicks
-        button.onclick = function(e) {
+       document.getElementById("fight_btn").addEventListener("click", function start () {
             //Damage occurs to both players at a random amount between half damage and maximum damage.
             var minDamage1 = fighters[0].damage * .5;
             var minDamage2 = fighters[1].damage * .5;
@@ -76,19 +75,16 @@ Assignment: Goal4: Assignment: Duel3
                 roundTxt.innerHTML = " *ROUND " + round + " OVER* ";
             } else {
                 //displays winners in middle top of screen
-                winner.innerHTML = '<p>' + results + '</p>';
+                    winner.innerHTML = '<p>' + results + '</p>';
                 //this get anchor tag
                 var done = document.querySelector('a.buttonblue');
                 //overwrites FIGHT!!! once winner is determined
                 done.innerHTML = "Done!!!";
-                //disables link?
-                console.log(this);
-                this.setAttribute('a href', 'disabled');
-                e.preventDefault();
-                return false;
+                document.getElementById("fight_btn").removeEventListener('click',start);
             }
-        };
-    };
+            });
+
+    }
 
     //begin winnerCheck function
     function winnerCheck(){
@@ -103,11 +99,11 @@ Assignment: Goal4: Assignment: Duel3
              result = fighters[1].name+" WINS!!!"
         }else if(fighters[1].health<1){
             result = fighters[0].name+" WINS!!!"
-        };
+        }
 
         return result;
 
-    };
+    }
 
     /******* The program gets started below *******/
     console.log('program starts');

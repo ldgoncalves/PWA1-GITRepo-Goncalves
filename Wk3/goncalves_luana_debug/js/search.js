@@ -128,5 +128,5 @@
 		// THE LINE DIRECTLY BELOW IS CORRECT
 		return false;
 	};
-
+	
 })();
