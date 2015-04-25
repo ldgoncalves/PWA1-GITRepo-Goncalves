@@ -21,6 +21,7 @@
 		while(query.charAt(0) === " "){//execute if true if false, go to next while loop
 			query = query.substring(1, query.length);
 		}
+
 		while(query.charAt(query.length-1) === "") {//this loop check if there is no whitespace
 			query = query.substring(0, query.length - 1);
 		}
@@ -29,6 +30,7 @@
 		if(query.length < 3){
 			//in order to move on, query has to be more than 3
 			alert("Your search query is too small, try again.");
+			console.log("Your search query is too small, try again.");
 			// (DO NOT FIX THE LINE DIRECTLY BELOW)
 			searchInput.focus();
 			return;
@@ -37,11 +39,14 @@
 		search(query);//call function
 	};
 
+
 	// Finds search matches
-	var search = function(query){ //search function begins here //forgot (){}// Fixed braces
+	var search = function(query){ //search function begins here //forgot (){} //Fixed braces
+
 
 		// split the user's search query string into an array
-		var queryArray = query.join(" ");
+		var queryArray = query.split(" ");//changed join to split
+
 
 		// array to store matched results from database.js
 		var results = [];
@@ -101,8 +106,8 @@
 
 			// title of video ends with pipe
 			// pull the title's string using index numbers
-			titleEnd = results[i].indexOf('|');
-			title = results[i].subString(0, titleEnd); //substring in case-sensitive
+			var titleEnd = results[i].indexOf('|');
+			title = results[i].substring(0, titleEnd); //substring is case-sensitive
 
 			// pull the video url after the title
 			url = results[i].substring(results[i].indexOf('|')+1, results[i].length);
@@ -123,5 +128,5 @@
 		// THE LINE DIRECTLY BELOW IS CORRECT
 		return false;
 	};
-
+	
 })();
