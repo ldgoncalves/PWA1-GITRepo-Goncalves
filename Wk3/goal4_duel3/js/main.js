@@ -80,6 +80,7 @@ Assignment: Goal4: Assignment: Duel3
                 var done = document.querySelector('a.buttonblue');
                 //overwrites FIGHT!!! once winner is determined
                 done.innerHTML = "Done!!!";
+                //disables button from  running function when clicked
                 document.getElementById("fight_btn").removeEventListener('click',start);
             }
             });
