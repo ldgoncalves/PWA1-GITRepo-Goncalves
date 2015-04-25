@@ -82,12 +82,11 @@ Assignment: Goal4: Assignment: Duel3
                 //overwrites FIGHT!!! once winner is determined
                 done.innerHTML = "Done!!!";
                 //disables link?
-                this.setAttribute('href', 'disabled');
+                console.log(this);
+                this.setAttribute('a href', 'disabled');
                 e.preventDefault();
                 return false;
             }
-
-
         };
     };
 
